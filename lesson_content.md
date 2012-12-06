@@ -1,0 +1,8 @@
+- overview
+- inspector
+- inspector preview, make a texture preview like unity's texture inspector
+- window
+- wizard
+- save asset
+- modify asset
+- import asset
