@@ -4,10 +4,12 @@
 Image
 Unity Source/Library/*
 Unity Source/obj/*
+Unity Source/Temp/*
 *.csproj
 *.sln
 *.pidb
 *.userprefs
+*.html
 
 
 
