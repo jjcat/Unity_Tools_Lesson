@@ -5,6 +5,12 @@
 ## 简介 ##
 使用Unity提供的Editor类库，可以让开发者创建自定义的Inspector面板和窗口。[这里](http://docs.unity3d.com/Documentation/ScriptReference/20_class_hierarchy.Editor_Classes.html)是Unity官方的Editor类库在线参考文档，您在接下来的学习和开发中将会一直使用它查找相关类参考文档。
 
+##Editor Classes##
+在Unity的官方Scripting Reference的目录下，他把所有的Scripting分为两类，一类叫做Runtime Classes，还有一类叫做Editor Classes。如果您只是用Unity进行游戏开发，那么您可能只接触过Runtime Classes，Runtime Classes是在游戏中运行的Scripting。而Editor Classes是在Unity下运行的Scripting。如果我们要制作工具，那么一定是在Unity下运行的，所以这些就是进行工具制作的类库。
+
+Editor Classes指代Unity中的Editor类库，它包含了几十个关于Unity编辑器的类。这些类的功能很多，能帮助您在Unity下创建自己的工具。例如有关于Asset的类，他们能让您创建，修改，删除Asset，这样您可以自定义资源，并导入到Unity中进行编辑和修改。还有强大的动画工具类，可以创建和访问动画文件，如果你觉得Unity自带的Animation Editor还不能满足您的要求，你完全可以自己制作一个新的Animation Editor进行动画的创建和修改。
+
+
 ## 自定义Inspector面板和默认Inspector面板的对比 ##
 下图中，左边的Inspector是Unity默认给My Player类创建的，右边的Inspector面板是我们自定义的。显然右边的Inspector面板更加适合设计师用来进行数值的修改，它包含了最大和最小值的区间，并用一个Loading Bar来展现视觉要素。
 
