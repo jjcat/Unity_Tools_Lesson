@@ -11,7 +11,7 @@ public class MyPlayerInspector : Editor
     // Initilization
     void OnEnable()
     {
-        MyPlayer myPlayer = target as MyPlayer;
+        MyPlayer myPlayer = target as MyPlayer; 
         damageProp = myPlayer.damage;
         armorProp = myPlayer.armor;
         gunProp = myPlayer.gun;
