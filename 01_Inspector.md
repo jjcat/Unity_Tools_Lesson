@@ -11,7 +11,7 @@ Inspector面板可以用来对Componet和Asset进行快速编辑。如果您的U
 	using UnityEngine;
 	[System.Serializable]
 	using System.Collections;
-		public class MyPlayer : MonoBehaviour 
+	public class MyPlayer : MonoBehaviour 
 	{
     	public int armor  = 75;
     	public int damage = 75;
@@ -57,39 +57,38 @@ Unity默认的Inspector面板可以随意对该变量进行修改。当MyPlayer�
         public int armorProp;
         public GameObject gunProp;
 
-    // Initilization
-    void OnEnable()
-    {
-     	MyPlayer myPlayer = target as MyPlayer;
-        damageProp = myPlayer.damage;
-        armorProp = myPlayer.armor;
-        gunProp = myPlayer.gun;
-    }
-
-    public override void OnInspectorGUI()
-    {
-        // show slider and process bar
-        damageProp =  EditorGUILayout.IntSlider("Damage", damageProp, 0, 100);
-        ProgressBar(damageProp/ 100.0f, "Damage");
-
-        // show slider and process bar
-        armorProp = EditorGUILayout.IntSlider("Armor", armorProp, 0, 100);
-        ProgressBar(armorProp/ 100.0f, "Armor");
-            
-        gunProp = EditorGUILayout.ObjectField("Player's Gun", gunProp, typeof(GameObject), true) as GameObject;
-
-    }
-
-    // Custom GUILayout progress bar.
-    private void ProgressBar(float value, string label)
-    {
-        Rect rect = GUILayoutUtility.GetRect(18, 18, "TextField");
-        EditorGUI.ProgressBar(rect, value, label);
-        EditorGUILayout.Space();
-    }
-
-
-}
+	    // Initilization
+	    void OnEnable()
+	    {
+	     	MyPlayer myPlayer = target as MyPlayer;
+	        damageProp = myPlayer.damage;
+	        armorProp = myPlayer.armor;
+	        gunProp = myPlayer.gun;
+	    }
+	
+	    public override void OnInspectorGUI()
+	    {
+	        // show slider and process bar
+	        damageProp =  EditorGUILayout.IntSlider("Damage", damageProp, 0, 100);
+	        ProgressBar(damageProp/ 100.0f, "Damage");
+	
+	        // show slider and process bar
+	        armorProp = EditorGUILayout.IntSlider("Armor", armorProp, 0, 100);
+	        ProgressBar(armorProp/ 100.0f, "Armor");
+	            
+	        gunProp = EditorGUILayout.ObjectField("Player's Gun", gunProp, typeof(GameObject), true) as GameObject;
+	
+	    }
+	
+	    // Custom GUILayout progress bar.
+	    private void ProgressBar(float value, string label)
+	    {
+	        Rect rect = GUILayoutUtility.GetRect(18, 18, "TextField");
+	        EditorGUI.ProgressBar(rect, value, label);
+	        EditorGUILayout.Space();
+	    }
+	
+	}
 
 然后打开Unity编辑器，选中GameObject，您就能看到自定义Inspector面板的内容了。
 
